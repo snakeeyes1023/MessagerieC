@@ -76,11 +76,7 @@ void Usager::genererIdentifiantUnique()
 	identifiantUnique.append(troisLettrePrenom);
 
 	//date de naissance (aa/mm/jj) 
-	std::string annee = std::to_string(m_naissance.m_annee);
-	std::string mois = std::to_string(m_naissance.m_mois);
-	std::string jour = std::to_string(m_naissance.m_jour);
-
-	std::string date = annee + '/' + mois + '/' + jour;
+	std::string date = m_naissance.ObtenirDateFormatte();
 
 	identifiantUnique.append(date);
 

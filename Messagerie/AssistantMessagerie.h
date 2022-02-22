@@ -1,5 +1,6 @@
 /// <summary>
-/// Assisant pour toutes les actions qui touche à la console
+/// Assisant pour tous les actions qui touche à la console
+/// L'assistant agit comme programme principale un peu
 /// </summary>
 #pragma once
 
@@ -14,10 +15,38 @@ public:
 	/// </summary>
 	AssistantMessagerie();
 
-	/// <summary>
-	/// Créer un usager à partir de la console
-	/// </summary>
-	void creeUsager();
+	
+    /// <summary>
+    /// Affiche toutes les options de menu
+    /// </summary>
+    void afficherOptionMenu();
+
+    /// <summary>
+    /// Demande une question et boucle tant que la réponse est vide
+    /// </summary>
+    std::string obtenirValeurConsole(std::string textAfficher);
+
+
+private:
+    /// <summary>
+    /// Obtenir le ID de l'utilisateur
+    /// </summary>
+    /// <param name="btRecept">Boite de receptions</param>
+    /// <param name="index">Index choisie dans la boîte de receptions</param>
+    /// <returns>Id de l'utilisateur</returns>
+    std::string obtenirIdUtilisateurs(BoiteReception& btRecept, int index);
+
+    /// <summary>
+    /// Rechercher dans une utilisateur dans à partir de son ID
+    /// </summary>
+    /// <param name="id">Id de l'usager</param>
+    /// <returns>Index dans le vecteur</returns>
+    int rechercherUtilisateur(std::string id);
+
+    /// <summary>
+    /// Créer un usager à partir de la console
+    /// </summary>
+    void creeUsager();
 
     /// <summary>
     /// Créer un lien entre deux utilisateurs à partir de la console
@@ -50,7 +79,7 @@ public:
 
     /// <summary>
     /// Lire un message d'un utilisateur 
-    /// ATTENTION : utilise la meme orde que lorsqu'on envoie un message
+    /// ATTENTION : utilise la meme orde que lorsqu'on envoie un message (pour aller chercher un contact)
     /// Volontaire
     /// </summary>
     void lireMessage();
@@ -67,33 +96,6 @@ public:
     /// <param name="index"></param>
     /// <returns></returns>
     Usager obtenirUsager(int index);
-
-    /// <summary>
-    /// Affiche toutes les options de menu
-    /// </summary>
-    void afficherOptionMenu();
-
-    /// <summary>
-    /// Demande une question et boucle tant que la réponse est vide
-    /// </summary>
-    std::string obtenirValeurConsole(std::string textAfficher);
-
-    /// <summary>
-    /// Obtenir le ID de l'utilisateur
-    /// </summary>
-    /// <param name="btRecept">Boite de receptions</param>
-    /// <param name="index">Index choisie dans la boîte de receptions</param>
-    /// <returns>Id de l'utilisateur</returns>
-    std::string obtenirIdUtilisateurs(BoiteReception& btRecept, int index);
-
-    /// <summary>
-    /// Rechercher dans une utilisateur dans à partir de son ID
-    /// </summary>
-    /// <param name="id">Id de l'usager</param>
-    /// <returns>Index dans le vecteur</returns>
-    int rechercherUtilisateur(std::string id);
-
-private:
 
 	vector<Usager> m_usagers;
 

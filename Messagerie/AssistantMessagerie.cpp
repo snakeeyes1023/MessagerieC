@@ -100,6 +100,7 @@ void AssistantMessagerie::envoyerMessage()
 	{
 		std::string message = obtenirValeurConsole("Message : ");
 
+		
 		resultat = m_usagers[valA]
 			.obtenirBoiteReception()
 			.ajouterMessage(message, m_usagers[index]);

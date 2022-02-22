@@ -28,7 +28,7 @@ bool BoiteReception::ajouterMessage(std::string message, Usager& destinataire)
 	{
 		return false;
 	}
-	if (message.length() > int{255})
+	if (message.length() == int{ 0 } || message.length() > int{280})
 	{
 		return false;
 	}

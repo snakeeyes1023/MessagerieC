@@ -158,6 +158,9 @@
     <ClInclude Include="Reception.h" />
     <ClInclude Include="Usager.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\Desktop\DiagramMessagerie.png" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

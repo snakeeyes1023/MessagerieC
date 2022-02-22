@@ -1,6 +1,6 @@
 /// <summary>
 /// Reception : Correspond as une liste de message qui appartient à un usager
-/// Exemple : Une boîte de reception contient plusieurs reception
+/// Exemple : Une boîte de reception contient plusieurs receptions
 /// </summary>
 
 #pragma once
